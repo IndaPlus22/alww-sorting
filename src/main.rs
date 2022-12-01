@@ -147,3 +147,36 @@ impl EventHandler for AppState {
         Ok(())
     }
 }
+
+#[test]
+fn insert_sort_test() {
+    let mut unsorted: Vec<isize> = vec![5, 2, 1, 6, 1];
+    let mut sorted: Vec<isize> = unsorted.clone();
+    sorted.sort();
+    insertion_sort(&mut unsorted);
+    assert_eq!(unsorted, sorted);
+}
+#[test]
+fn selection_sort_test() {
+    let mut unsorted: Vec<isize> = vec![5, 2, 1, 6, 1];
+    let mut sorted: Vec<isize> = unsorted.clone();
+    sorted.sort();
+    selection_sort(&mut unsorted);
+    assert_eq!(unsorted, sorted);
+}
+#[test]
+fn merge_sort_test() {
+    let mut unsorted: Vec<isize> = vec![5, 2, 1, 6, 1];
+    let mut sorted: Vec<isize> = unsorted.clone();
+    sorted.sort();
+    merge_sort(&mut unsorted);
+    assert_eq!(unsorted, sorted);
+}
+#[test]
+fn pancake_sort_test() {
+    let mut unsorted: Vec<isize> = vec![5, 2, 1, 6, 1];
+    let mut sorted: Vec<isize> = unsorted.clone();
+    sorted.sort();
+    insertion_sort(&mut unsorted);
+    assert_eq!(unsorted, sorted);
+}
